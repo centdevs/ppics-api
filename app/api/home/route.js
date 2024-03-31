@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
 const axios = require( "axios")
 const cheerio = require("cheerio")
+import { config } from "dotenv";
 
-let BASE_URL = "https://www.pornpics.com"
+config();
+
+let BASE_URL = process.env.BASE_URL;
 
 async function getHome() {
     try {
